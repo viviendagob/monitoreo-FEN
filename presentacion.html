@@ -124,6 +124,17 @@ footer{padding:50px 0;text-align:center;color:var(--ink-d);font-size:.78rem;bord
 .cta-final{background:var(--surf);border:1px solid var(--border);border-radius:20px;padding:44px;text-align:center;margin-top:10px}
 .cta-final h3{font-size:1.5rem;font-weight:800;margin:0 0 10px}
 .cta-final p{color:var(--ink-m);margin-bottom:24px}
+
+button.pill-btn{font-family:'Inter',sans-serif;cursor:pointer}
+
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;color-adjust:exact!important}
+  header{position:static}
+  #btnDescargarPdf,.navactions a.primary,.cta-final a.pill-btn{display:none!important}
+  section{break-inside:auto}
+  .card,.shot,.flow-box,.tl-step{break-inside:avoid}
+  a[href]::after{content:''}
+}
 </style>
 </head>
 <body>
@@ -142,7 +153,8 @@ footer{padding:50px 0;text-align:center;color:var(--ink-d);font-size:.78rem;bord
       <a href="#cronograma">Cronograma</a>
     </div>
     <div class="navactions">
-      <a class="pill-btn primary" href="https://ginopula.github.io/ReporteRiesgos/" target="_blank">🌐 Ver Visor en vivo</a>
+      <button class="pill-btn" onclick="window.print()" id="btnDescargarPdf">🖨️ Descargar PDF</button>
+      <a class="pill-btn primary" href="https://viviendagob.github.io/monitoreo-FEN/" target="_blank">🌐 Ver Visor en vivo</a>
     </div>
   </div>
 </header>
@@ -290,7 +302,7 @@ footer{padding:50px 0;text-align:center;color:var(--ink-d);font-size:.78rem;bord
     <div class="cta-final">
       <h3>El seguimiento continúa en el Visor</h3>
       <p>Estado, avance de campo y alertas se actualizan directamente ahí, punto por punto.</p>
-      <a class="pill-btn primary" href="https://ginopula.github.io/ReporteRiesgos/" target="_blank" style="display:inline-flex">🌐 Abrir el Visor de Intervenciones</a>
+      <a class="pill-btn primary" href="https://viviendagob.github.io/monitoreo-FEN/" target="_blank" style="display:inline-flex">🌐 Abrir el Visor de Intervenciones</a>
     </div>
   </div>
 </section>
